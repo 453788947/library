@@ -1,0 +1,53 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: be59710184ef3226719c5cc386ee475b3c9b1d9ed8aed35755e94db60a396f52
+
+name:           FP2021Khalansky08
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/FP2021Khalansky/08#readme>
+homepage:       https://github.com/FP2021Khalansky/08#readme
+bug-reports:    https://github.com/FP2021Khalansky/08/issues
+author:         Dmitry Khalansky
+maintainer:     dkhalansky+fp2021@gmail.com
+copyright:      2021 Dmitry Khalansky
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/FP2021Khalansky/08
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_FP2021Khalansky08
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+test-suite FP2021Khalansky08-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_FP2021Khalansky08
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      FP2021Khalansky08
+    , HUnit
+    , QuickCheck
+    , base >=4.7 && <5
+    , generic-random
+  default-language: Haskell2010
